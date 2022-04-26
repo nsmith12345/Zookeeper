@@ -1,0 +1,24 @@
+{
+  "name": "zookeeper",
+  "version": "1.0.0",
+  "description": "organizing animal data",
+  "main": "server.js",
+  "scripts": {
+    "test": "server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nsmith12345/Zookeeper.git"
+  },
+  "author": "nsmith12345",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nsmith12345/Zookeeper/issues"
+  },
+  "homepage": "https://github.com/nsmith12345/Zookeeper#readme",
+  "keywords": [],
+  "dependencies": {
+    "express": "^4.18.0"
+  }
+}

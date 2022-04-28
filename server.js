@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const express = require('express');
 const { animals } = require('./data/animals');
+const res = require('express/lib/response');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -83,6 +84,11 @@ app.get('./api/animals/:id', (req, res) => {
     res.send(404);
   }
 });
+
+app.get('/', req, res) => {
+  res.sendFile(path.join(__dirname, './public.zookeepr-public/index.html'));
+};
+
 
 app.post('./api/animals', (req, res) => {
   // set id based on what the next index of the array will be

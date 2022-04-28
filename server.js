@@ -67,7 +67,7 @@ function validateAnimal(animal) {
   return true;
 }
 
-app.get('/api/animals', (req, res) => {
+app.get('./api/animals', (req, res) => {
   let results = animals;
   if (req.query) {
     results = filterByQuery(req.query, results);
@@ -75,7 +75,7 @@ app.get('/api/animals', (req, res) => {
   res.json(results);
 });
 
-app.get('/api/animals/:id', (req, res) => {
+app.get('./api/animals/:id', (req, res) => {
   const result = findById(req.params.id, animals);
   if (result) {
     res.json(result);
@@ -84,11 +84,7 @@ app.get('/api/animals/:id', (req, res) => {
   }
 });
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, './public/index.html'));
-});
-
-app.post('/api/animals', (req, res) => {
+app.post('./api/animals', (req, res) => {
   // set id based on what the next index of the array will be
   req.body.id = animals.length.toString();
 
